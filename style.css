@@ -11,6 +11,8 @@
   --neu-white: hsl(0, 0%, 100%);
   --neu-trans-white: hsla(0, 0%, 100%, 0.75);
   --neu-more-trans-white: hsla(0, 0%, 100%, 0.6);
+
+  --bg-violet: hsl(277deg 100% 50% / 73%);
 }
 
 /* defaults */
@@ -31,7 +33,10 @@ body {
   min-height: 100vh;
   background-color: var(--prim-dark-blue);
   color: var(--neu-white);
+  font-weight: 400;
 }
+
+/* stats card */
 
 main {
   min-width: 600px;
@@ -43,7 +48,7 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  padding: 5.85em 7.5em 5.85em 5.85em;
+  padding: 5.85em 7em 5.85em 5.85em;
   width: 570px;
   min-width: 300px;
   background: var(--prim-sat-blue);
@@ -54,6 +59,7 @@ section h1 {
   color: var(--neu-white);
   font-size: 2.25rem;
   margin-bottom: 0.75em;
+  font-weight: 700;
 }
 
 section h1 span {
@@ -75,10 +81,6 @@ section ul {
   list-style: none;
   justify-content: space-between;
   letter-spacing: 1px;
-}
-
-section ul li:last-child {
-  /* margin-right: 20px; */
 }
 
 section ul h2 {
@@ -106,11 +108,35 @@ section ul p {
 }
 
 .overlay {
-  background: hsl(277deg 100% 50% / 73%);
+  background: var(--bg-violet);
   overflow: hidden;
   height: 100%;
   opacity: 0.5;
 }
+
+/* footer */
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+  color: var(--neu-more-trans-white);
+  margin-bottom: 10px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--neu-trans-white);
+  font-weight: bold;
+}
+
+.attribution a:hover {
+  color: var(--prim-violet);
+}
+
+/* media queries */
 
 @media only screen and (max-width: 1024px) {
   :root {
@@ -122,12 +148,11 @@ section ul p {
 }
 
 @media only screen and (max-width: 625px) {
-  /* :root {
-    font-size: 15px;
-  } */
+  body {
+    flex-direction: column;
+  }
   main {
     flex-direction: column-reverse;
-    align-items: center;
     margin: 10px;
     min-width: 200px;
     margin-top: 5em;
@@ -166,8 +191,14 @@ section ul p {
     font-size: 1.05rem;
   }
   .bg-img {
-    height: 240px;
+    height: 220px;
     width: 300px;
     border-radius: 10px 10px 0 0;
+    background: url(images/image-header-mobile.jpg) no-repeat;
+    background-size: contain;
+  }
+  .attribution {
+    position: relative;
+    margin-top: 20px;
   }
 }
