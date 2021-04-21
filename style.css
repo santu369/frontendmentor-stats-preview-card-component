@@ -12,7 +12,8 @@
   --neu-trans-white: hsla(0, 0%, 100%, 0.75);
   --neu-more-trans-white: hsla(0, 0%, 100%, 0.6);
 
-  --bg-violet: hsl(277deg 100% 50% / 73%);
+  --bg-violet: hsl(277deg, 100%, 50%, 0.42);
+  --bg-light-violet: hsl(293deg, 42%, 35%, 0.24);
 }
 
 /* defaults */
@@ -96,8 +97,6 @@ section ul p {
 }
 
 .bg-img {
-  position: relative;
-  mix-blend-mode: overlay;
   min-height: 10em;
   width: 540px;
   min-width: 200px;
@@ -111,7 +110,13 @@ section ul p {
   background: var(--bg-violet);
   overflow: hidden;
   height: 100%;
-  opacity: 0.5;
+}
+
+.overlay-2 {
+  background: var(--bg-light-violet);
+  overflow: hidden;
+  height: 100%;
+  mix-blend-mode: color-burn;
 }
 
 /* footer */
