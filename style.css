@@ -104,17 +104,16 @@ section ul p {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0 10px 10px 0;
+  overflow: hidden;
 }
 
 .overlay {
   background: var(--bg-violet);
-  overflow: hidden;
   height: 100%;
 }
 
 .overlay-2 {
   background: var(--bg-light-violet);
-  overflow: hidden;
   height: 100%;
   mix-blend-mode: color-burn;
 }
